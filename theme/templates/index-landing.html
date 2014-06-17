@@ -1,1 +1,75 @@
 {% extends "base.html" %}
+
+{% block extrahead %}
+<style>
+<!--
+#masthead p {
+  font-size: large;
+}
+
+#masthead {
+  text-align: center;
+  padding-top: 3em;
+}
+
+#list, #discussion, #donate, #jump-in {
+  text-align: center;
+  font-size: x-large;
+}
+
+#list i, #discussion i, #donate i {
+  font-size: 6em;
+}
+
+-->
+</style>
+{% endblock extrahead %}
+
+{% block canvas %}
+<div class="row" id="masthead">
+  <div class="small-12 columns">
+    <h1>Hackron</h1>
+    <p><em>Hackerspace</em>, n: A community-operated place where people can meet
+    and work on their projects.</p>
+    <p>Hackron is an infrastructure provider for creative people in Akron,
+    Ohio. We value tools over pre-emptive rules, and spurn the key and the
+    lock.</p>
+  </div>
+</div>
+<div class="row">
+  <div class="small-5 small-centered columns" id="jump-in">
+    <a class="button large" href="http://github.com/hackron/hackron">Ready to jump
+        in?</a>
+  </div>
+</div>
+<div class="row">
+  <div class="small-3 columns" id="list">
+    <h2>Newsletter</h2>
+    <form action="http://hackron.us8.list-manage.com/subscribe/post?u=53b30a03e770135e6b2f3dc8b&amp;id=8e1bc02620" method="post">
+    <!-- Begin MailChimp Signup Form -->
+      <label for="mce-EMAIL">Email Address </label>
+      <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_53b30a03e770135e6b2f3dc8b_8e1bc02620" tabindex="-1" value=""></div>
+      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    </form>
+  </div>
+  <div class="small-3 columns" id="donate">
+    <a href="http://twitter.com/hackron_">
+      <h2>Twitter</h2>
+      <i class="fa fa-twitter"></i>
+    </a>
+  </div>
+  <div class="small-3 columns" id="discussion">
+    <a href="http://discuss.hackron.org">
+      <h2>Discussion</h2>
+      <i class="fa fa-comments"></i>
+    </a>
+  </div>
+  <div class="small-3 columns" id="donate">
+    <a href="http://gittip.com/hackron_">
+      <h2>Donate</h2>
+      <i class="fa fa-gittip"></i>
+    </a>
+  </div>
+</div>
+{% endblock %}

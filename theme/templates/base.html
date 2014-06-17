@@ -7,52 +7,37 @@
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/app.css" />
     <script src="{{ SITEURL }}/theme/bower_components/modernizr/modernizr.js"></script>
+    {% block extrahead %}{% endblock %}
     <style>
 <!--
 body {
   background: url( "{{ SITEURL }}/theme/img/noise.png");
 }
-#masthead p {
-  font-size: large;
+
+footer {
+  margin-top: 3em;
+  background-color: #222;
+  font-size: small;
+  padding: 2em;
+}
+
+footer p {
+  font-size: small;
 }
 -->
     </style>
   </head>
   <body>
-    <form action="http://hackron.us8.list-manage.com/subscribe/post?u=53b30a03e770135e6b2f3dc8b&amp;id=8e1bc02620" method="post">
-      <div class="row" id="masthead">
-        <div class="small-12 columns">
-          <h1>Hackron</h1>
-          <p><em>Hackerspace</em>, n: A community-operated place where people can meet
-          and work on their projects.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-8 columns">
-          <p>Hackron is an infrastructure provider for creative people in Akron,
-          Ohio. We value tools over pre-emptive rules, and spurn the key and the
-          lock.</p>
-          <p>If you'd like to follow along and get involved, join our mailing
-          list:<p>
-        </div>
-        <div class="medium-4 columns">
-          <!-- Begin MailChimp Signup Form -->
-            <label for="mce-EMAIL">Email Address </label>
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-            <div style="position: absolute; left: -5000px;"><input type="text" name="b_53b30a03e770135e6b2f3dc8b_8e1bc02620" tabindex="-1" value=""></div>
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-          <p>We also have a Discourse forum available for discussion. If you
-          want to get involved and join our discussion, head over to
-          <a href="http://discuss.hackron.org">discuss.hackron.org</a> to get
-          started.
-        </div>
-      </div>
-    </form>
+    {% block canvas %}{% endblock canvas %}
     
+  <!-- <footer>
+    <div class="row">
+      <div class="small-9 columns">
+        <p>Made with <span style="color:#f00">❤</span> by Hackronites</p>
+        <p>View this page on GitHub <a href="http://github.com/hackron/frontpage"></a></p>
+      </div>
+    </div>
+  </footer> -->
     <script src="{{ SITEURL }}/theme/bower_components/jquery/jquery.js"></script>
     <script src="{{ SITEURL }}/theme/bower_components/foundation/foundation.js"></script>
     <script src="{{ SITEURL }}/theme/js/app.js"></script>
