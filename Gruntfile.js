@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        includePaths: ['bower_components/foundation/scss']
+        includePaths: ['bower_components/foundation/scss', 'bower_components/font-awesome/scss']
       },
       dist: {
         options: {
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       pelican: {
-        files: ['theme/templates/**', 'content/**', 'pelicanconf.py'],
+        files: ['theme/templates/**', 'theme/static/**', 'content/**', 'pelicanconf.py'],
         tasks: ['pelican']
       },
 
